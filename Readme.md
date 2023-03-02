@@ -57,8 +57,33 @@ echo 1 >> /sys/class/gpio/gpio24/value
 ![](./bbb.png)
 
 
-# Your work and description here
+# Manejo de los GPIOs de la BeagleBone Black
+  
+Este proyecto es un script que permite configurar los GPIOs de la BeagleBone. El script se ejecuta con el comando `./gpio.sh` y recibe 2 o 3 argumentos dependiendo el modo que se desee implementar.
 
-**Add here the description and the code that you develop to create a bash function to configure any GPIO to write (output) or read(input) by passing arguments to your command `gpio.sh`**.
+El primer argumento indica el numero del GPIO que se va a usar, los GPIOs permitidos son los siguientes:
+```
+2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15, 20, 22, 23, 26, 27, 30,31, 32, 33, 34, 35, 36,
+37, 38,39, 44, 45, 46, 47, 48, 49, 50, 51, 60, 61, 62, 63, 65, 66, 67, 68, 69, 70, 71, 72,
+73, 74, 75, 76, 77, 78, 79, 80, 81, 86, 87, 88, 89, 110, 111, 112, 113, 114, 115, 116 y 117. 
+```
 
+El segundo argumento configura el GPIO como entrada o salida recibiendo `in` y `out`. 
+**Nota:**En caso de configurar el GPIO como entrada ya no es necesario un tercer argumento, si se ingresa el tercer argumento este sera ignorado. 
 
+Configuracion del GPIO 60 como entrada.
+```
+./gpio.sh 60 in
+```
+
+En la configuracion del GPIO como salida el tercer argumento asigna el estado alto o bajo con `1` y `0`.
+
+Configuracion del GPIO 60 como salida en estado alto.
+```
+./gpio.sh 60 out 1
+```
+Por ultimo, para acceder al menu de ayuda se utiliza como primer argumento un numero correspondiente a cualquier GPIO permitido y el segundo argumento es la palabra `help`.
+```
+./gpio.sh 2 help
+```
+Al igual que en la configuracion de un GPIO como entrada no es necesario un tercer argumento.
