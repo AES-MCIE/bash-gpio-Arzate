@@ -66,7 +66,7 @@ sudo chmod +x gpio.sh
 ```
 **Teniendo en cuenta que se encuentra en la ruta del archivo.**
 
-##Instrucciones
+## Instrucciones
 
 El primer argumento indica el numero del GPIO que se va a usar, los GPIOs permitidos son los siguientes:
 ```
