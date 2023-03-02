@@ -60,6 +60,11 @@ echo 1 >> /sys/class/gpio/gpio24/value
 # Manejo de los GPIOs de la BeagleBone Black
   
 Este proyecto es un script que permite configurar los GPIOs de la BeagleBone. El script se ejecuta con el comando `./gpio.sh` y recibe 2 o 3 argumentos dependiendo el modo que se desee implementar.
+**Nota: Para ejecutar el script se deben tener permisos de ejecucion, para agregar permisos de ejecucion se utiliza el comando:**
+```
+sudo chmod +x gpio.sh
+```
+**Teniendo en cuenta que se encuentra en la ruta del archivo.**
 
 El primer argumento indica el numero del GPIO que se va a usar, los GPIOs permitidos son los siguientes:
 ```
@@ -69,7 +74,7 @@ El primer argumento indica el numero del GPIO que se va a usar, los GPIOs permit
 ```
 
 El segundo argumento configura el GPIO como entrada o salida recibiendo `in` y `out`. 
-**Nota:**En caso de configurar el GPIO como entrada ya no es necesario un tercer argumento, si se ingresa el tercer argumento este sera ignorado. 
+**Nota: En caso de configurar el GPIO como entrada ya no es necesario un tercer argumento, si se ingresa el tercer argumento este sera ignorado.** 
 
 Configuracion del GPIO 60 como entrada.
 ```
