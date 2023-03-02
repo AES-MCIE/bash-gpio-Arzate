@@ -65,7 +65,9 @@ Este proyecto es un script que permite configurar los GPIOs de la BeagleBone. El
 sudo chmod +x gpio.sh
 ```
 **Teniendo en cuenta que se encuentra en la ruta del archivo.**
+
 ##Instrucciones
+
 El primer argumento indica el numero del GPIO que se va a usar, los GPIOs permitidos son los siguientes:
 ```
 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15, 20, 22, 23, 26, 27, 30,31, 32, 33, 34, 35, 36,
