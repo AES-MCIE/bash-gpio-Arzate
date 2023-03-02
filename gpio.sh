@@ -21,7 +21,7 @@ function gpioValue
  
 function Error
 {
-    echo "Error, intente ./gpio-bash 2 help"
+    echo "Error, intente ./gpio-bash 2 help para mas informacion"
 }
  
 if [ -d "$gpio$Num" ]; then
